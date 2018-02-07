@@ -12,6 +12,7 @@ public class LoginActivity extends AppCompatActivity {
     //1.Explicit ปากาศตัวแปร
     EditText nameEditText,usernameEditText, passwordEditText;
     Button loginButton;
+    String nameString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,9 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Sub BOIIII!!!!",Toast.LENGTH_SHORT).show();
+
+                nameString = nameEditText.getText().toString().trim();
+                Toast.makeText(getApplicationContext(),"Sub BOIIII!!!!" + nameString,Toast.LENGTH_SHORT).show();
             }
         });
 
